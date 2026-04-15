@@ -1,0 +1,27 @@
+{
+  "name": "library-management-system",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Varad-ctrl/Library-Management-System#readme",
+  "bugs": {
+    "url": "https://github.com/Varad-ctrl/Library-Management-System/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Varad-ctrl/Library-Management-System.git"
+  },
+  "license": "ISC",
+  "author": "Varad Jadhav",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
