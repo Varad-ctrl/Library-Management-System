@@ -1,25 +1,22 @@
-const express = require('express');
+const express = require("express");
 
 const app = express();
-
-app.use(express.json());
-
 const port = 8081;
 
-app.get('/', (req, res) => {
-    res.status(200).json({
-        message: "Home Page :-)"
-    })
-})
+// middleware
+app.use(express.json());
 
-// app.all('*', (req, res) => {
-//     res.status(500).json({
-//         message: ""
-//     })
-// })
+// routes
+const usersRouter = require("./routes/users");
+const booksRouter = require("./routes/books"); // optional
 
+app.get("/", (req, res) => {
+    res.json({ message: "Home Page :-)" });
+});
+
+app.use("/users", usersRouter);
+app.use("/books", booksRouter);
 
 app.listen(port, () => {
-    console.log(`Server is up and running on http://localhost:${port}`);
-})
-
+    console.log(`Server running on http://localhost:${port}`);
+});
